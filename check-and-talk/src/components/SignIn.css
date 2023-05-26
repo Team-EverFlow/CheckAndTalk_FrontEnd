@@ -1,0 +1,64 @@
+*{font-family:Pretendard;}
+
+body{
+    margin: 0;
+}
+
+.leftScreen{
+    width: 50%;
+    height: 100vh;
+    float: left;
+    background-color: #464646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rightScreen{
+    width: 50%;
+    height: 100vh;
+    float: right;
+    background-color: #333333;
+    position: relative;
+    justify-content: center;
+}
+
+.Title{       
+    color:white ;
+    text-align: center;
+    font-size: 20pt;
+    margin-top: 15%;
+    margin-bottom: 8%;
+
+}
+
+.Google img, .Facebook img, .Github img {
+    width: 8%;
+    height: 8%;
+    padding-right: 40px;
+    padding-left: 40px;
+    text-align: center;
+}
+
+.Google span, .Github span, .Facebook span {
+    color: white;
+    font-size: 24pt;
+    text-align: center;
+    padding-right: 40px;
+}
+  
+.Google, .Facebook, .Github{
+    border: 1px solid white;
+    border-radius: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+   }
+
+.logoVertical {
+ 
+  }
+  
