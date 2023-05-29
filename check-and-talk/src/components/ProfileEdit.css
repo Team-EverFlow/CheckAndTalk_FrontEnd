@@ -13,7 +13,7 @@ white_back : FFFFFF, 0.5
     height: 520px;
     border-radius: 20px;
     border: rgba(255, 255, 255, 0.5);
-    border-width: 2px;
+    border-width: 5px;
     border-style: solid;
     align-items: center;
     justify-content: center;
@@ -85,6 +85,7 @@ white_back : FFFFFF, 0.5
 
 .check {
     color: #FFC656;
+    font-weight: 600;
 }
 
 .cancel {
