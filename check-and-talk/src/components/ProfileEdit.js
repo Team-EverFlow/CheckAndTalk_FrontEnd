@@ -12,11 +12,7 @@ class ProfileEdit extends Component {
                 </div>
                 <div className='ProfileEdit-color'>
                     <div className='color-info'>
-                        <div className='red'></div>
-                        <div className='yellow'></div>
-                        <div className='green'></div>
-                        <div className='blue'></div>
-                        <div className='purple'></div>
+                        {colorList.map((v) => (<div className={v}></div>))}
                     </div>
                     <div className='check-cancel'>
                         <div className='check cell'>확인</div>
