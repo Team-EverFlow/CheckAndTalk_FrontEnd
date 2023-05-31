@@ -1,16 +1,69 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navigationHeader {
+  display: flex;
+  justify-content: space-between; /* 로고와 로그아웃 버튼 사이의 공간을 최대로 확장 */
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* 배경이 넘치지 않도록 설정 */
+  width: 100%; /* 너비를 화면 전체로 설정 */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navigationHeader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명한 검은색 배경 */
+  backdrop-filter: blur(12px); /* 블러 처리 */
+  z-index: -1; /* 블러 배경을 맨 아래로 보냄 */
+}
+
+.catLogo {
+  width: 160px; /* 로고의 너비를 2배로 조정하세요 */
+  margin-left: 40px; /* 로고를 오른쪽으로 100px 고정 */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.navigationArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%; /* 화면 상단으로부터 50% 위치에 정렬 */
+  left: 50%; /* 화면 좌측으로부터 50% 위치에 정렬 */
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+}
+
+.navigationArea button:not(:focus) {
+  /* 색상 변경 코드 추가, 선택되지 않은 버튼 */
+}
+
+.navigationTalk {
+  margin: 0 10px; /* 네비게이션 항목 간의 간격을 조정하세요 */
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: #fff; /* 글자색을 흰색으로 변경 */
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.signOutButton {
+  position: absolute;
+  top: 50%; /* 수직으로 가운데 정렬 */
+  right: 40px; /* 로그아웃 버튼을 오른쪽으로 100px 고정 */
+  transform: translateY(-50%); /* 수직 가운데 정렬을 위한 이동 */
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: #fff; /* 글자색을 흰색으로 변경 */
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 24px;
 }
 
 .App-header {
@@ -24,15 +77,12 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .catLogo {
+    width: 80px; /* 너비를 절반으로 조정 */
   }
-  to {
-    transform: rotate(360deg);
+
+  .navigationTalk {
+    font-size: 24px;
   }
 }
